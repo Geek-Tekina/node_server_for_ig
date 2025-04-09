@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send("Success");
 });
 
-app.post('/insta', (req, res) => {
+app.get('/insta', (req, res) => {
   const { code } = req.query;
 
   console.log("Query values >>>>>>>>", access_token, token_type, expires_in);
