@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.get('/insta', (req, res) => {
   const { code } = req.query;
 
-  console.log("Query values >>>>>>>>", access_token, token_type, expires_in);
+//   console.log("Query values >>>>>>>>", access_token, token_type, expires_in);
 
   myCache.set("access_token", code);
 //   myCache.set("token_type", token_type);
