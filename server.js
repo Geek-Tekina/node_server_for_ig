@@ -29,8 +29,8 @@ app.get('/getTokens', (req, res) => {
 
   res.json({
     access_token: myCache.get("access_token"),
-    token_type: myCache.get("token_type"),
-    expires_in: myCache.get("expires_in"),
+    // token_type: myCache.get("token_type"),
+    // expires_in: myCache.get("expires_in"),
   });
 });
 
