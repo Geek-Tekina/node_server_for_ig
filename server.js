@@ -6,6 +6,7 @@ const port = 3000;
 const values = {};
 app.get('/', (req, res) => {
 //   res.send('Welcome to my server!');
+console.log("Get api hit !!")
 
 
   res.json(
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.post('/insta', (req, res) => {
     const {access_token, token_type, expires_in} = req.query;
+    console.log("Query values >>>>>>>>", access_token, token_type, expires_in)
     values[access_token] = access_token;
     values[token_type] = token_type;
     values[expires_in] = expires_in;
