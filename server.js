@@ -8,15 +8,16 @@ app.get('/', (req, res) => {
 //   res.send('Welcome to my server!');
 console.log("Get api hit !!")
 
-
-//   res.json(
-//     {
-//         "access_token": values[access_token],
-//         "token_type": values[token_type],
-//         "expires_in": values[expires_in]
-//       }
-//   );
-res.send("Get Api hit");
+if(values)
+ { res.json(
+    {
+        "access_token": values[access_token],
+        "token_type": values[token_type],
+        "expires_in": values[expires_in]
+      }
+  );}
+  else{
+res.send("Get Api hit");}
 });
 
 app.post('/insta', (req, res) => {
