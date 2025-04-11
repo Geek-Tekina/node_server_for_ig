@@ -17,6 +17,8 @@ app.get('/insta', (req, res) => {
 //   console.log("Query values >>>>>>>>", access_token, token_type, expires_in);
 
   myCache.set("access_token", code);
+  res.redirect(`myinstagramapp://auth?code=${code}`);
+
 //   myCache.set("token_type", token_type);
 //   myCache.set("expires_in", expires_in);
 
